@@ -5,9 +5,9 @@
 # Rethinkit Inc.
 # Chris Simotas 
 # christopher.simotas@tufts.edu
-# July 27, 2017
+# October 17, 2017
 #
-# Version 1.1
+# Version 1.2
 # Windows 10
 #
 ### README ###
@@ -45,9 +45,11 @@
 #   or
 #   PowerShell.exe -Command "& 'C:\... \DomainReporter.ps1'"
 #
+# - False values have been entered in for a few of the default values. Please give true values
+#   to allow program to work.
 # - To enable scripts, Run powershell 'as admin' then type Set-ExecutionPolicy Unrestricted
 # - The program whois64.exe must be located in the same folder as the program
-#   source: https://technet.microsoft.com/en-us/sysinternals/bb89743
+#   source: https://docs.microsoft.com/en-us/sysinternals/downloads/whois
 # - If a property is added, please be sure to add it to the switch statement in the importData function 
 #   if it can not be found using the default case (or using the findDesiredWord function)
 # - If a property is added to the default values, be sure to enter NULL in its corresponding spot
@@ -149,11 +151,11 @@ Function globalsInit
     ####         the program will purposely fail
     ####       - each value in the backupProperties array can be an array
 
-    $Globals.Add("mailServer", "smtp2.rethinkit.com")
-    $Globals.Add("mailFrom", "domainreporter@rethinkit.com")
-    $Globals.Add("mailTo", "jason@rethinkit.com")
+    $Globals.Add("mailServer", "smtp2.server.com")
+    $Globals.Add("mailFrom", "domainreporter@server.com")
+    $Globals.Add("mailTo", "chris@server.com")
     $Globals.Add("reportFilename", "Domain_Cache.csv")
-    $Globals.Add("domainList", "DomainsToCheck.csv") 
+    $Globals.Add("domainList", "DomainsToCheckPublic.csv") 
     $Globals.Add("daysLimit", 30)
 
     # when you add a value to properties, be sure to add a value or NULL in the correct place in backupProperties as well

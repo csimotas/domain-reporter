@@ -3,9 +3,9 @@ Domain Reporter
 Rethinkit Inc.
 Chris Simotas 
 christopher.simotas@tufts.edu
-July 27, 2017
+October, 17 2017
 
-Version 1.1
+Version 1.2
 Windows 10
 
 Download whois from https://docs.microsoft.com/en-us/sysinternals/downloads/whois
